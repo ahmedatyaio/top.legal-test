@@ -1,8 +1,29 @@
+import { gql, useQuery } from '@apollo/client';
 import { Button, Typography } from '@mui/material';
 import Head from 'next/head';
 import { FiChevronsLeft } from 'react-icons/fi';
 
+const GET_EPISODES = gql`
+  query GetEpisodes {
+    episodes {
+      info {
+        count
+        pages
+        next
+        prev
+      }
+      results {
+        id
+        name
+      }
+    }
+  }
+`;
+
 export default function Home() {
+  const { loading, data, error } = useQuery(GET_EPISODES);
+  console.log({ loading, data, error });
+
   return (
     <>
       <Head>
