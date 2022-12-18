@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import Head from 'next/head';
 
 export default function Home() {
@@ -9,8 +10,15 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main>
-        <h1>First Commit!</h1>
+      <main
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          height: '100vh',
+        }}
+      >
+        <Button variant="contained">Hello World!</Button>
       </main>
     </>
   );
