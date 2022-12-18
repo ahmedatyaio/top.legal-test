@@ -1,5 +1,6 @@
-import { Button } from '@mui/material';
+import { Button, Typography } from '@mui/material';
 import Head from 'next/head';
+import { FiChevronsLeft } from 'react-icons/fi';
 
 export default function Home() {
   return (
@@ -13,12 +14,18 @@ export default function Home() {
       <main
         style={{
           display: 'flex',
+          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
           height: '100vh',
         }}
       >
-        <Button variant="contained">Hello World!</Button>
+        <Typography variant="h1" fontSize={24}>
+          Hey! :)
+        </Typography>
+        <Button variant="contained" startIcon={<FiChevronsLeft />}>
+          Hello World!
+        </Button>
       </main>
     </>
   );
